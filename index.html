@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 </head>
 
 <body>
@@ -15,7 +16,8 @@
 				<figure class="logotipo">
 					<img src="images/invie.png" width="186" height="60"><!-- Banner -->
 				</figure>
-				<nav class="menu">
+				<span class="burguer-button icon-menu" id="burguer-button"></span>
+				<nav class="menu" id="menu">
 					<ul class="menuli">
 						<li> <a href="index.html">Home</a> </li>
 						<li> <a href="#guitarras">Guitarras</a> </li>
@@ -62,16 +64,18 @@
 	<footer>
 		<div class="container">
 		<div class="contenedor">
+			
+		<form class="formulario" action="">
+			
 			<div class="contacto">
 				<img src="images/invie-white.png" alt="Logo">
 				<a href="tel:+573192594536"><strong>Teléfono: </strong><span>319 259 4536</span></a>
 				<a href="mailto:demorales@invie.com"><strong>Email: </strong><span>demorales@invie.com</span></a>
 			</div>
 
-			<form class="formulario" action="">
 			<div class="col1">			
 				<label for="nombre">Nombre</label>
-				<input type="text" id="nombre" required name="nombre" />
+				<input type="text" id="nombre" required name="nombre" /><br>
 				<label for="email">Email</label>
 				<input type="email" id="email"  required name="email">		
 
@@ -95,14 +99,31 @@
 			</div>
 
 			<div class="col2">
-					<label for="comentarios">Comentarios
-						<textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
-					</label>
-					<input class="button" type="submit" value="Enviar">
+				<label for="comentarios">Comentarios
+				<textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+				</label>
+				<input class="button" type="submit" value="Enviar">
 			</div>
-			</form>
+		</form>
 		</div>	
 		</div>
 	</footer>
+
+<script>
+
+	var $burguerButton = document.getElementById("burguer-button");
+    var $menu = document.getElementById("menu");
+    $burguerButton.addEventListener('touchstart', toggleMenu);
+    
+    function toggleMenu(){
+    $menu.classList.toggle('active')
+    };
+
+</script>
+
+
 </body>
 </html>
+
+
+
