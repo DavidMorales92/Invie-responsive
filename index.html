@@ -3,6 +3,7 @@
 <head>
 	<title>Invie</title>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">	
 </head>
@@ -62,16 +63,18 @@
 	<footer>
 		<div class="container">
 		<div class="contenedor">
+			
+		<form class="formulario" action="">
+			
 			<div class="contacto">
 				<img src="images/invie-white.png" alt="Logo">
 				<a href="tel:+573192594536"><strong>Teléfono: </strong><span>319 259 4536</span></a>
 				<a href="mailto:demorales@invie.com"><strong>Email: </strong><span>demorales@invie.com</span></a>
 			</div>
 
-			<form class="formulario" action="">
 			<div class="col1">			
 				<label for="nombre">Nombre</label>
-				<input type="text" id="nombre" required name="nombre" />
+				<input type="text" id="nombre" required name="nombre" /><br>
 				<label for="email">Email</label>
 				<input type="email" id="email"  required name="email">		
 
@@ -95,12 +98,12 @@
 			</div>
 
 			<div class="col2">
-					<label for="comentarios">Comentarios
-						<textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
-					</label>
-					<input class="button" type="submit" value="Enviar">
+				<label for="comentarios">Comentarios
+				<textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+				</label>
+				<input class="button" type="submit" value="Enviar">
 			</div>
-			</form>
+		</form>
 		</div>	
 		</div>
 	</footer>
