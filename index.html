@@ -3,9 +3,9 @@
 <head>
 	<title>Invie</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 </head>
 
 <body>
@@ -16,7 +16,8 @@
 				<figure class="logotipo">
 					<img src="images/invie.png" width="186" height="60"><!-- Banner -->
 				</figure>
-				<nav class="menu">
+				<span class="burguer-button icon-menu" id="burguer-button"></span>
+				<nav class="menu" id="menu">
 					<ul class="menuli">
 						<li> <a href="index.html">Home</a> </li>
 						<li> <a href="#guitarras">Guitarras</a> </li>
@@ -107,5 +108,22 @@
 		</div>	
 		</div>
 	</footer>
+
+<script>
+
+	var $burguerButton = document.getElementById("burguer-button");
+    var $menu = document.getElementById("menu");
+    $burguerButton.addEventListener('touchstart', toggleMenu);
+    
+    function toggleMenu(){
+    $menu.classList.toggle('active')
+    };
+
+</script>
+
+
 </body>
 </html>
+
+
+
