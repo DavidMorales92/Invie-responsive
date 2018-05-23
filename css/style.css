@@ -272,15 +272,39 @@ input:focus, textarea:focus{
 	width: 40px;
 	line-height: 40px;
 	border-radius: 40px;
-	display: block;
+	display: none;
 	text-align: center;
-	background: #084B8A;
+	background: linear-gradient(to left, #fe344e, #ff7250);
 	position: absolute;
 	left: 30px;
-	top: 40px;
+	top: 35px;
 	cursor: pointer;
 }
+video {
+  width: 100%;
+}
 
+
+.video-responsive-contenedor {
+  position: relative;
+  padding-top: 56.25%;
+  border: 2px solid #ff7250;
+  margin: 20px 30px;
+}
+
+.video-responsive-src {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-demo-contenedor {
+  margin-bottom: 90px;
+}
 
 
 /*RESPONSIVE DESING Important Querys 320px 768px 1024px*/
@@ -373,6 +397,10 @@ input:focus, textarea:focus{
 
 @media screen and (max-width: 500px){
 
+	.burguer-button{
+		display: block;
+	}
+
 	.menu {
 	    background: rgba(255, 60, 88, 0.9);
 	    position: fixed;
@@ -396,6 +424,7 @@ input:focus, textarea:focus{
 
 	.menu li{
 		margin-left: 0;
+		background: linear-gradient(to left, #fe344e, #ff7250);
 	}
 
 	.menu li:hover{
@@ -442,6 +471,25 @@ input:focus, textarea:focus{
 
 	.tittle-b, .tittle-a{
 		font-size: 30px;
+	}
+
+	video {
+	  width: 100%;
+	}
+
+	.video-responsive-contenedor {
+	  position: relative;
+	  padding-top: 56.25%;
+	}
+
+	.video-responsive-src {
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  top: 0;
+	  bottom: 0;
+	  width: 100%;
+	  height: 100%;
 	}
 
 }
