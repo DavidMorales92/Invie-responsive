@@ -453,6 +453,20 @@ video {
 	.contacto{
 		margin-left: -50px;
 	}
+
+	table {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.tabla{
+		margin: 50px 20px;
+	}
+
+	.tabla .container {
+		overflow: auto;
+		border: 1px solid #273b47;
+	}
 }
 
 @media screen and (max-width: 768px){
@@ -517,7 +531,20 @@ video {
 	.container-guitarras{
 	    padding: 0 20px;
 	}
+	
+	table {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 
+	.tabla{
+		margin: 50px 20px;
+	}
+
+	.tabla .container {
+		overflow: auto;
+		border: 1px solid #273b47;
+	}
 
 }
 
@@ -539,6 +566,20 @@ video {
 
 	.menu ul{
 		padding: 0;
+	}
+
+	table {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.tabla{
+		margin: 50px 20px;
+	}
+
+	.tabla .container {
+		overflow: auto;
+		border: 1px solid #273b47;
 	}
 
 }
@@ -638,6 +679,20 @@ video {
 	  bottom: 0;
 	  width: 100%;
 	  height: 100%;
+	}
+
+	table {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.tabla{
+		margin: 50px 20px;
+	}
+
+	.tabla .container {
+		overflow: auto;
+		border: 1px solid #273b47;
 	}
 
 }
