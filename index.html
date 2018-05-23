@@ -33,7 +33,7 @@
 
 	
 	<section id="guitarras" class="guitarras"> <!-- Guitarras -->
-		<div class="container">
+		<div class="container-guitarras container">
 			<h2>Nuestras Guitarras</h2>
 			
 			<div class="video-demo-contenedor">
@@ -120,6 +120,8 @@
 		</div>
 	</footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
+
 <script>
 	var consulta = window.matchMedia('(max-width: 800px)');
 	consulta.addListener(mediaQuery);
@@ -138,8 +140,22 @@
     $burguerButton.addEventListener('touchstart', toggleMenu);
     
     function toggleMenu(){
-    $menu.classList.toggle('active')
+    	$menu.classList.toggle('active')
     };
+    function showMenu(){
+    	$menu.classList.add('active');
+    };
+    function hideMenu(){
+    	$menu.classList.remove('active');
+    };
+
+ /*http://hammerjs.github.io/recognizer-swipe/*/   
+ 	// Gestos touch
+      var $body = document.body;
+
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu);
+      gestos.on('swiperight', showMenu);
 
 </script>
 
