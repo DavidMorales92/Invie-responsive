@@ -19,7 +19,7 @@
 				<nav class="menu" id="menu">
 					<ul class="menuli">
 						<li> <a href="index.html">Home</a> </li>
-						<li> <a href="index.html#guitarras">Guitarras</a> </li>
+						<li> <a href="index.html#guitarras" onclick="toggleMenu()">Guitarras</a> </li>
 						<li> <a href="precios.html">Precios</a> </li>
 					</ul>
 				</nav>
@@ -121,6 +121,8 @@
 		</div>
 	</footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
+
 <script>
 	var consulta = window.matchMedia('(max-width: 800px)');
 	consulta.addListener(mediaQuery);
@@ -139,11 +141,28 @@
     $burguerButton.addEventListener('touchstart', toggleMenu);
     
     function toggleMenu(){
-    $menu.classList.toggle('active')
+    	if (consulta.matches) {
+	    $menu.classList.toggle('active');
+	    document.body.classList.toggle('opened');
+	    $burguerButton.classList.toggle('icon-close');    
+		}
     };
+    function showMenu(){
+    	$menu.classList.add('active');
+    };
+    function hideMenu(){
+    	$menu.classList.remove('active');
+    };
+    
+ /*http://hammerjs.github.io/recognizer-swipe/*/   
+ 	// Gestos touch
+      var $body = document.body;
+
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu);
+      gestos.on('swiperight', showMenu);
 
 </script>
-
 
 </body>
 </html>

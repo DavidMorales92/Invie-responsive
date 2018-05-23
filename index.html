@@ -20,7 +20,7 @@
 				<nav class="menu" id="menu">
 					<ul class="menuli">
 						<li> <a href="index.html">Home</a> </li>
-						<li> <a href="#guitarras">Guitarras</a> </li>
+						<li> <a href="#guitarras" onclick="toggleMenu()">Guitarras</a> </li>
 						<li> <a href="precios.html">Precios</a> </li>
 					</ul>
 				</nav>
@@ -140,7 +140,11 @@
     $burguerButton.addEventListener('touchstart', toggleMenu);
     
     function toggleMenu(){
-    	$menu.classList.toggle('active')
+    	if (consulta.matches) {
+	    $menu.classList.toggle('active');
+	    document.body.classList.toggle('opened');
+	    $burguerButton.classList.toggle('icon-close');    
+		}
     };
     function showMenu(){
     	$menu.classList.add('active');
@@ -148,7 +152,7 @@
     function hideMenu(){
     	$menu.classList.remove('active');
     };
-
+    
  /*http://hammerjs.github.io/recognizer-swipe/*/   
  	// Gestos touch
       var $body = document.body;
