@@ -34,7 +34,18 @@
 	
 	<section id="guitarras" class="guitarras"> <!-- Guitarras -->
 		<div class="container">
-			<h2>Nuestras Guitarras</h2>		
+			<h2>Nuestras Guitarras</h2>
+			
+			<div class="video-demo-contenedor">
+	        <div class="video-demo">
+	          <div class="video-responsive-contenedor">
+	            <iframe class="video-responsive-src" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allowfullscreen></iframe>
+	          </div>
+	        </div>
+	      </div>
+	      <!-- <video src="video/320x240.ogg"></video> -->
+
+
 			<article class="guitarra"><!-- Guitarra1 -->
 				<img src="images/invie-acustica.png" alt="Guitarra acustica" width="350" class="derecha" />
 				<div class="contenedor-guitarra-a">
@@ -110,7 +121,18 @@
 	</footer>
 
 <script>
+	var consulta = window.matchMedia('(max-width: 800px)');
+	consulta.addListener(mediaQuery);
 
+	function mediaQuery(){
+		if(consulta.matches){
+			console.log("Si");
+		}
+		else{
+			console.log("No");
+		}
+	}
+	
 	var $burguerButton = document.getElementById("burguer-button");
     var $menu = document.getElementById("menu");
     $burguerButton.addEventListener('touchstart', toggleMenu);
