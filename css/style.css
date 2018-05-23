@@ -153,10 +153,6 @@ body{
 	padding-left: 20px;
 }
 
-.contenedor-guitarra-a, .contenedor-guitarra-b{
-	margin: 0 20px;
-}
-
 .derecha{
 	float: right;
 	position: relative;
@@ -517,6 +513,11 @@ video {
 	fieldset{
 		width: 95%;
 	}
+
+	.container-guitarras{
+	    padding: 0 20px;
+	}
+
 
 }
 
