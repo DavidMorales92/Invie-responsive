@@ -153,6 +153,10 @@ body{
 	padding-left: 20px;
 }
 
+.contenedor-guitarra-a, .contenedor-guitarra-b{
+	margin: 0 20px;
+}
+
 .derecha{
 	float: right;
 	position: relative;
@@ -183,12 +187,20 @@ footer .container{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
+	margin-right: 220px;
 }
 
+.col1{
+	margin-right: 30px;
+}
 .col2{
-	margin-top: .30px;
+	align-items: flex-start;
 }
 
+.col1, .col2{
+	display: flex;
+	flex-direction: column;
+}
 .contacto a{	
 	color: white;
 	text-decoration: none;
@@ -207,18 +219,6 @@ footer .container{
 	width: 400px;
 	margin-top: -50px;
 	padding: 50px 10px;
-}
-
-.col1{
-	margin-right: 15px;
-}
-.col2{
-	align-items: flex-start;
-}
-
-.col1, .col2{
-	display: flex;
-	flex-direction: column;
 }
 
 .intereses label{
@@ -288,8 +288,9 @@ video {
 .video-responsive-contenedor {
   position: relative;
   padding-top: 56.25%;
-  border: 2px solid #ff7250;
+  border: 10px solid #ff7250;
   margin: 20px 30px;
+  border-radius: 10px 0 10px 0;
 }
 
 .video-responsive-src {
@@ -306,8 +307,93 @@ video {
   margin-bottom: 90px;
 }
 
+.intereses label{
+	display: block;
+}
+
+.sexo label{
+	display: block;
+}
+
 
 /*RESPONSIVE DESING Important Querys 320px 768px 1024px*/
+
+@media screen and (max-width: 1024px){
+
+	.guitarra {
+		margin: 0;
+		padding: 0;
+		margin-bottom: 15px;
+	}
+
+	.derecha{
+		top: -137px;
+	}
+
+	footer{
+		background-color: #273b47;
+		padding: 0 100px;
+	}
+
+	footer .container{
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 10px;
+	}
+
+	.contacto{
+		width: 300px;
+		height: 200px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		margin-right: 80px;
+		margin-left: -40px;
+	}
+
+	.col1{
+		margin-right: 30px;
+	}
+	.col2{
+		align-items: flex-start;
+	}
+
+	.col1, .col2{
+		display: flex;
+		flex-direction: column;
+	}
+	.contacto a{	
+		color: white;
+		text-decoration: none;
+		margin: 0 10px 0 0;
+	}
+	.contacto img{
+		margin-bottom: -10px; 
+	}
+
+	.contacto strong{
+		display: block;	
+	}
+	.formulario{
+		color: white;
+		display: flex;
+		width: 400px;
+		margin-top: -50px;
+		padding: 50px 10px;
+	}
+
+	.intereses label{
+		font-size: 12px;
+	}
+
+	.formulario label, .sexo, .intereses{
+		margin-bottom: 5px;
+	}
+
+	.sexo{
+		margin-top: 10px;
+	}
+}
 
 @media screen and (max-width: 800px){
 
@@ -371,6 +457,67 @@ video {
 	.contacto{
 		margin-left: -50px;
 	}
+}
+
+@media screen and (max-width: 768px){
+/*FOOTER*/
+	footer{
+		display: block;
+		height: auto;
+		padding: 25px 0;
+	}
+
+	footer .contenedor{
+		margin: 0 auto;
+	}
+
+	footer .contacto{
+		display: flex;
+		flex-wrap: wrap;
+		width: 310px;
+		margin: 0;
+	}
+
+	footer .contacto a{
+		margin: 0;
+		margin-right: 10px;
+	}
+
+	footer .formulario{
+		display: block;
+		padding: 0;
+		width: 310px;
+		margin: 0;
+	}
+
+	.intereses label{
+		display: block;
+		font-size: 16px;
+	}
+
+	.sexo label{
+		display: block;
+	}
+
+	input[type="text"],input[type="email"]{
+		font-size: 14px;
+		padding: 5px;
+		width: 100%;
+	}
+
+	textarea{
+		width: 99%;
+		height: 100%;
+	}
+
+	input[type="radio"],input[type="checkbox"]{
+		zoom: 1.4;
+	}
+
+	fieldset{
+		width: 95%;
+	}
+
 }
 
 
@@ -494,76 +641,4 @@ video {
 
 }
 
-@media screen and (max-width: 1024px){
 
-	.formulario{
-		margin: -200px 0 0px 290px;
-	}
-
-	.izquierda {
-    top: -75px;
-    right: 55px;
-}
-}
-
-
-
-@media screen and (max-width: 768px){
-/*FOOTER*/
-	footer{
-		display: block;
-		height: auto;
-		padding: 25px 0;
-	}
-
-	footer .contenedor{
-		margin: 0 auto;
-	}
-
-	footer .contacto{
-		display: flex;
-		flex-wrap: wrap;
-		width: 310px;
-		margin: 0;
-	}
-
-	footer .contacto a{
-		margin: 0;
-		margin-right: 10px;
-	}
-
-	footer .formulario{
-		display: block;
-		padding: 0;
-		width: 310px;
-		margin: 0;
-	}
-
-	.intereses label{
-		display: block;
-		font-size: 16px;
-	}
-
-	.sexo label{
-		display: block;
-	}
-
-	input[type="text"],input[type="email"]{
-		font-size: 14px;
-		padding: 5px;
-		width: 100%;
-	}
-
-	textarea{
-		width: 99%;
-	}
-
-	input[type="radio"],input[type="checkbox"]{
-		zoom: 1.4;
-	}
-
-	fieldset{
-		width: 95%;
-	}
-
-}
